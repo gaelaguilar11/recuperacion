@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Interactivo: Aprende Jugando</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        section {
+            margin: 20px 0;
+        }
+        .game {
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .message {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #e74c3c;
+        }
+        footer {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Interactivo: Aprende Jugando</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>¡Adivina el Número!</h2>
+            <p>Intenta adivinar un número entre 1 y 10. Tienes 3 intentos para adivinar el número correcto.</p>
+        </section>
+        <section class="game">
+            <input type="number" id="guess" min="1" max="10" placeholder="1-10">
+            <button onclick="checkGuess()">Adivinar</button>
+            <p class="message" id="message"></p>
+        </section>
+    </div>
+    <footer>
+        <p>Derechos de autor © 2024 CECyTEM 20 Uruapan. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        let attempts = 3;
+
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById('guess').value);
+            const message = document.getElementById('message');
+
+            if (!userGuess || userGuess < 1 || userGuess > 10) {
+                message.textContent = 'Por favor, introduce un número válido entre 1 y 10.';
+                return;
+            }
+
+            attempts--;
+
+            if (userGuess === randomNumber) {
+                message.textContent = '¡Felicidades! Adivinaste el número correcto.';
+                message.style.color = '#27ae60';
+                document.getElementById('guess').disabled = true;
+                document.querySelector('button').disabled = true;
+            } else if (attempts > 0) {
+                message.textContent = `Incorrecto. Te quedan ${attempts} intento(s).`;
+            } else {
+                message.textContent = `Lo siento, has perdido. El número correcto era ${randomNumber}.`;
+                document.getElementById('guess').disabled = true;
+                document.querySelector('button').disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

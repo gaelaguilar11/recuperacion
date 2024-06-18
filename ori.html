@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programación Orientada a Objetos (POO) - CECyTEM 20 Uruapan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        section {
+            margin: 20px 0;
+        }
+        h2, h3 {
+            color: #34495e;
+        }
+        .example {
+            background-color: #ecf0f1;
+            border-left: 5px solid #3498db;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .code {
+            background-color: #e8e8e8;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        footer {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Programación Orientada a Objetos (POO)</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Introducción a la Programación Orientada a Objetos (POO)</h2>
+            <p>La programación orientada a objetos (POO) es un paradigma de programación basado en el concepto de "objetos", que pueden contener datos y código: datos en forma de campos, y código en forma de procedimientos conocidos como métodos. La POO se utiliza para modelar objetos del mundo real y sus interacciones.</p>
+        </section>
+
+        <section>
+            <h2>Principios de la POO</h2>
+            <h3>Encapsulamiento</h3>
+            <p>El encapsulamiento es la ocultación de los detalles de implementación y el acceso a los datos solo a través de métodos definidos. Esto ayuda a proteger los datos y a modular el código.</p>
+
+            <h3>Abstracción</h3>
+            <p>La abstracción se refiere a la simplificación de la complejidad mediante la modelización de clases apropiadas según el contexto. Permite enfocarse en los aspectos esenciales y ocultar los detalles irrelevantes.</p>
+
+            <h3>Herencia</h3>
+            <p>La herencia es un mecanismo mediante el cual una clase puede heredar propiedades y métodos de otra clase. Esto promueve la reutilización de código y establece una relación jerárquica entre clases.</p>
+
+            <h3>Polimorfismo</h3>
+            <p>El polimorfismo permite que diferentes clases respondan de manera diferente a la misma llamada de método. Esto se logra mediante la sobrescritura de métodos en clases derivadas.</p>
+        </section>
+
+        <section>
+            <h2>Ejemplos de POO en JavaScript</h2>
+            <div class="example">
+                <h3>Creación de una Clase</h3>
+                <div class="code">
+                    <pre>
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    saludar() {
+        return `Hola, me llamo ${this.nombre} y tengo ${this.edad} años.`;
+    }
+}
+
+// Crear una instancia de la clase Persona
+const persona1 = new Persona('Juan', 25);
+console.log(persona1.saludar());
+                    </pre>
+                </div>
+                <p>En este ejemplo, se crea una clase <code>Persona</code> con un constructor que inicializa los atributos <code>nombre</code> y <code>edad</code>. Además, se define un método <code>saludar</code> que devuelve un saludo con el nombre y la edad de la persona.</p>
+            </div>
+
+            <div class="example">
+                <h3>Herencia</h3>
+                <div class="code">
+                    <pre>
+class Estudiante extends Persona {
+    constructor(nombre, edad, carrera) {
+        super(nombre, edad);
+        this.carrera = carrera;
+    }
+
+    estudiar() {
+        return `${this.nombre} está estudiando ${this.carrera}.`;
+    }
+}
+
+// Crear una instancia de la clase Estudiante
+const estudiante1 = new Estudiante('Ana', 22, 'Ingeniería');
+console.log(estudiante1.saludar());
+console.log(estudiante1.estudiar());
+                    </pre>
+                </div>
+                <p>En este ejemplo, se crea una clase <code>Estudiante</code> que hereda de la clase <code>Persona</code>. La clase <code>Estudiante</code> añade un nuevo atributo <code>carrera</code> y un método <code>estudiar</code>.</p>
+            </div>
+
+            <div class="example">
+                <h3>Polimorfismo</h3>
+                <div class="code">
+                    <pre>
+class Profesor extends Persona {
+    constructor(nombre, edad, materia) {
+        super(nombre, edad);
+        this.materia = materia;
+    }
+
+    saludar() {
+        return `Hola, soy el profesor ${this.nombre} y enseño ${this.materia}.`;
+    }
+}
+
+// Crear una instancia de la clase Profesor
+const profesor1 = new Profesor('Carlos', 40, 'Matemáticas');
+console.log(profesor1.saludar());
+                    </pre>
+                </div>
+                <p>En este ejemplo, la clase <code>Profesor</code> sobrescribe el método <code>saludar</code> de la clase <code>Persona</code> para proporcionar una implementación específica para profesores.</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Derechos de autor © 2024 CECyTEM 20 Uruapan. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

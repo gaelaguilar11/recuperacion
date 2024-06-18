@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Avanzado - CECyTEM 20 Uruapan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        h2, h3 {
+            color: #34495e;
+        }
+        .example {
+            background-color: #ecf0f1;
+            border-left: 5px solid #3498db;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .code {
+            background-color: #e8e8e8;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CSS Avanzado</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html">Acerca de Nosotros</a></li>
+                    <li><a href="cursos.html">Nuestros Cursos</a></li>
+                    <li><a href="equipo.html">Nuestro Equipo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2>¿Qué es CSS Avanzado?</h2>
+        <p>CSS (Cascading Style Sheets) avanzado permite crear diseños web complejos y atractivos mediante técnicas avanzadas como flexbox, grid, animaciones y transiciones, y preprocesadores como SASS.</p>
+
+        <h3>Flexbox</h3>
+        <p>Flexbox es un modelo de diseño unidimensional que permite distribuir el espacio dentro de un contenedor y alinear los elementos internos de manera flexible.</p>
+        <div class="example">
+            <h4>Ejemplo:</h4>
+            <div class="code">
+                <pre>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.item {
+    background-color: #3498db;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+}</pre>
+            </div>
+        </div>
+
+        <h3>Grid</h3>
+        <p>CSS Grid Layout es un sistema de diseño bidimensional que permite dividir una página en regiones o definir la relación de tamaño, posición y capas entre partes del control construido a partir de primitivas del HTML.</p>
+        <div class="example">
+            <h4>Ejemplo:</h4>
+            <div class="code">
+                <pre>
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.item {
+    background-color: #2ecc71;
+    padding: 20px;
+    color: white;
+}</pre>
+            </div>
+        </div>
+
+        <h3>Animaciones y Transiciones</h3>
+        <p>Las animaciones y transiciones permiten agregar interactividad y dinamismo a las páginas web. Las transiciones cambian gradualmente los valores de las propiedades CSS, mientras que las animaciones permiten definir movimientos más complejos.</p>
+        <div class="example">
+            <h4>Ejemplo:</h4>
+            <div class="code">
+                <pre>
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    transition: transform 0.5s;
+}
+
+.box:hover {
+    transform: rotate(45deg);
+}</pre>
+            </div>
+        </div>
+
+        <h3>Preprocesadores CSS (SASS)</h3>
+        <p>SASS (Syntactically Awesome Style Sheets) es un preprocesador CSS que permite usar variables, anidación, mixins, herencia y otras características que hacen que CSS sea más poderoso y fácil de mantener.</p>
+        <div class="example">
+            <h4>Ejemplo:</h4>
+            <div class="code">
+                <pre>
+$primary-color: #3498db;
+
+.container {
+    .item {
+        color: $primary-color;
+        @include border-radius(5px);
+    }
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Derechos de autor © 2024 CECyTEM 20 Uruapan. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

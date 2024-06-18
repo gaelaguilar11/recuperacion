@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a HTML - CECyTEM 20 Uruapan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        .example {
+            background-color: #f9f9f9;
+            border-left: 5px solid #333;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .code {
+            background-color: #e8e8e8;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Introducción a HTML</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html">Acerca de Nosotros</a></li>
+                    <li><a href="cursos.html">Nuestros Cursos</a></li>
+                    <li><a href="equipo.html">Nuestro Equipo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container">
+        <h2>¿Qué es HTML?</h2>
+        <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Describe la estructura de una página web y se compone de una serie de elementos que indican cómo se debe mostrar el contenido en el navegador.</p>
+
+        <h3>Estructura Básica de un Documento HTML</h3>
+        <div class="example">
+            <h4>Ejemplo:</h4>
+            <div class="code">
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>
+                &lt;head&gt;<br>
+                &lt;title&gt;Título de la Página&lt;/title&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                &lt;h1&gt;Mi Primer Encabezado&lt;/h1&gt;<br>
+                &lt;p&gt;Mi primer párrafo.&lt;/p&gt;<br>
+                &lt;/body&gt;<br>
+                &lt;/html&gt;
+            </div>
+        </div>
+        <p>Este es un ejemplo básico de un documento HTML. Vamos a desglosarlo en sus componentes principales:</p>
+
+        <h3>Elementos HTML</h3>
+        <p>Los elementos HTML son los componentes básicos de un documento HTML. Cada elemento está representado por etiquetas, como <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, etc.</p>
+
+        <h4>Encabezados</h4>
+        <p>Los encabezados se utilizan para definir títulos y subtítulos en una página. HTML tiene seis niveles de encabezados, desde <code>&lt;h1&gt;</code> (el más importante) hasta <code>&lt;h6&gt;</code> (el menos importante).</p>
+        <div class="example">
+            <h4>Ejemplo:</h4>
+            <div class="code">
+                &lt;h1&gt;Encabezado 1&lt;/h1&gt;<br>
+                &lt;h2&gt;Encabezado 2&lt;/h2&gt;<br>
+                &lt;h3&gt;Encabezado 3&lt;/h3&gt;<br>
+                &lt;h4&gt;Encabezado 4&lt;/h4&gt;<br>
+                &lt;h5&gt;Encabezado 5&lt;/h5&gt;<br>
+                &lt;h6&gt;Encabezado 6&lt;/h6&gt;
+            </div>
+        </div>
+
+        <h4>Párrafos</h4>
+        <p>Los párrafos se definen con la etiqueta <code>&lt;p&gt;</code>. Los navegadores añaden un espacio antes y después de cada párrafo.</p>
+        <div class="example">
+            <h4>Ejemplo:</h4>
+            <div class="code">
+                &lt;p&gt;Este es un párrafo.&lt;/p&gt;<br>
+                &lt;p&gt;Este es otro párrafo.&lt;/p&gt;
+            </div>
+        </div>
+
+        <h4>Enlaces</h4>
+        <p>Los enlaces se definen con la etiqueta <code>&lt;a&gt;</code>. Puedes hacer clic en un enlace para ir a otra página o ubicación.</p>
+        <div class="example">
+            <h4>Ejemplo:</h4>
+            <div class="code">
+                &lt;a href="https://www.example.com"&gt;Visita Example.com&lt;/a&gt;
+            </div>
+        </div>
+
+        <h4>Imágenes</h4>
+        <p>Las imágenes se definen con la etiqueta <code>&lt;img&gt;</code>. Debes especificar el atributo <code>src</code> para indicar la fuente de la imagen y el atributo <code>alt</code> para proporcionar un texto alternativo.</p>
+        <div class="example">
+            <h4>Ejemplo:</h4>
+            <div class="code">
+                &lt;img src="ruta/a/la/imagen.jpg" alt="Descripción de la imagen"&gt;
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Derechos de autor © 2024 CECyTEM 20 Uruapan. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
